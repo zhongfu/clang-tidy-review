@@ -66,7 +66,7 @@ outputs:
     description: 'Total number of warnings from clang-tidy'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://ghcr.io/zhongfu/clang-tidy-review:v0.10.1-zhongfu'
   args:
     - --clang_tidy_binary=clang-tidy-${{ inputs.clang_tidy_version }}
     - --token=${{ inputs.token }}
